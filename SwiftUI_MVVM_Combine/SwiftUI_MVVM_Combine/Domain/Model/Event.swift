@@ -45,3 +45,5 @@ struct Event: Codable {
     var actor: Repo.Owner?
 }
 
+extension Event: Identifiable, Equatable { }
+

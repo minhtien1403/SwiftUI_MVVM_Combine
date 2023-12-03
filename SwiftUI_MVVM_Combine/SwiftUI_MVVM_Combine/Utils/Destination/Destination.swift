@@ -13,17 +13,20 @@ enum Destination: Hashable, Equatable {
     case main(viewModel: MainViewModel)
     case login(viewModel: LoginViewModel)
     case repoList(viewModel: RepoListViewModel)
+    case repoDetails(viewModel: RepoDetailsViewModel)
     
     var view: AnyView {
         switch self {
         case .main(viewModel: let viewModel):
-            return MainView(viewModel: viewModel).toAnyView()
+            MainView(viewModel: viewModel).toAnyView()
         case .login(viewModel: let viewModel):
-            return LoginView(viewModel: viewModel).toAnyView()
+            LoginView(viewModel: viewModel).toAnyView()
         case .tabbar:
-            return TabarView().toAnyView()
+            TabarView().toAnyView()
         case .repoList(viewModel: let viewModel):
-            return RepoListView(viewModel: viewModel).toAnyView()
+            RepoListView(viewModel: viewModel).toAnyView()
+        case.repoDetails(viewModel: let viewModel):
+            RepoDetailsView(viewModel: viewModel).toAnyView()
         }
     }
 }

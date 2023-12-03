@@ -9,7 +9,7 @@ import Foundation
 import Combine
 import Factory
 
-final class RepoListViewModel: ObservableObject, RepoUseCase {
+final class RepoListViewModel: ObservableObject {
     
     @Injected(\.repoServices) var repoServices: RepoServicesProtocol
     @Published var repos: [Repo] = []
@@ -21,7 +21,7 @@ final class RepoListViewModel: ObservableObject, RepoUseCase {
 
     
     func loadData() {
-        getRepos(param: APIParameters.GetRepoParam(per_page: perPage, page: page))
+        repoServices.getRepos(queryParams: APIParameters.GetRepoParam(per_page: perPage, page: page))
             .sink { complete in
                 switch complete {
                 case.finished:
@@ -44,8 +44,7 @@ final class RepoListViewModel: ObservableObject, RepoUseCase {
             return
         }
         state = .loadingMore
-        page += 1
-        getRepos(param: APIParameters.GetRepoParam(per_page: perPage, page: page))
+        repoServices.getRepos(queryParams: APIParameters.GetRepoParam(per_page: perPage, page: page + 1))
             .sink { complete in
                 switch complete {
                 case .finished:
@@ -58,6 +57,7 @@ final class RepoListViewModel: ObservableObject, RepoUseCase {
             } receiveValue: { repos in
                 self.state = .loaded
                 self.repos.append(contentsOf: repos.items)
+                self.page += 1
             }
             .store(in: &cancellableSet)
 

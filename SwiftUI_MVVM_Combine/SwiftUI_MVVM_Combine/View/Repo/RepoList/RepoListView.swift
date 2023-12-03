@@ -21,6 +21,8 @@ struct RepoListView: View {
             content
         }, error: viewModel.error)
         .navigationTitle("Repo List")
+        .listStyle(.plain)
+        .navigationBarTitleDisplayMode(.inline)
     }
     
     @ViewBuilder
@@ -52,7 +54,7 @@ struct RepoListView: View {
             ForEach(viewModel.repos) { repo in
                 RepoView(repo: repo)
                     .onTapGesture {
-                        // navigate to repo details
+                        navigator.push(to: .repoDetails(viewModel: RepoDetailsViewModel(repo: repo)))
                     }
             }
             
