@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		AD2D10C12B182A170056DE33 /* SwiftUI_MVVM_CombineApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2D10C02B182A170056DE33 /* SwiftUI_MVVM_CombineApp.swift */; };
-		AD2D10C32B182A170056DE33 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2D10C22B182A170056DE33 /* ContentView.swift */; };
 		AD2D10C72B182A190056DE33 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD2D10C62B182A190056DE33 /* Assets.xcassets */; };
 		AD2D10CA2B182A190056DE33 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD2D10C92B182A190056DE33 /* Preview Assets.xcassets */; };
 		AD2D10DE2B182A190056DE33 /* SwiftUI_MVVM_CombineUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2D10DD2B182A190056DE33 /* SwiftUI_MVVM_CombineUITests.swift */; };
@@ -29,6 +28,11 @@
 		AD2D11172B1851D10056DE33 /* APIRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2D11162B1851D10056DE33 /* APIRouter.swift */; };
 		AD2D11192B1852510056DE33 /* APIParameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2D11182B1852510056DE33 /* APIParameter.swift */; };
 		AD2D111B2B18549A0056DE33 /* Encodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2D111A2B18549A0056DE33 /* Encodable.swift */; };
+		AD8316E82B1DAF760011E3DF /* UserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD8316E72B1DAF760011E3DF /* UserView.swift */; };
+		AD8316EB2B1EC0F60011E3DF /* AddUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD8316EA2B1EC0F60011E3DF /* AddUserView.swift */; };
+		AD8316EF2B1ECADF0011E3DF /* AddUserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD8316EE2B1ECADF0011E3DF /* AddUserViewModel.swift */; };
+		AD8318B32B22C1510011E3DF /* EditUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD8318B22B22C1510011E3DF /* EditUserView.swift */; };
+		AD8318B52B22C1600011E3DF /* EditUserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD8318B42B22C1600011E3DF /* EditUserViewModel.swift */; };
 		ADE6C2D52B185B530099413C /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE6C2D42B185B530099413C /* Event.swift */; };
 		ADE6C2D82B185E940099413C /* RepoServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE6C2D72B185E940099413C /* RepoServices.swift */; };
 		ADE6C2DB2B186A4E0099413C /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE6C2DA2B186A4E0099413C /* LoginView.swift */; };
@@ -46,6 +50,10 @@
 		ADE6C3452B1C853F0099413C /* RepoDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE6C3442B1C853F0099413C /* RepoDetailsView.swift */; };
 		ADE6C3472B1C854A0099413C /* EventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE6C3462B1C854A0099413C /* EventView.swift */; };
 		ADE6C3492B1C855A0099413C /* RepoDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE6C3482B1C855A0099413C /* RepoDetailsViewModel.swift */; };
+		ADE6C34B2B1CB6C20099413C /* UserServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE6C34A2B1CB6C20099413C /* UserServices.swift */; };
+		ADE6C34D2B1CB72C0099413C /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE6C34C2B1CB72C0099413C /* User.swift */; };
+		ADE6C3532B1CC0DF0099413C /* UserListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE6C3522B1CC0DF0099413C /* UserListView.swift */; };
+		ADE6C3552B1CC0E90099413C /* UserListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE6C3542B1CC0E90099413C /* UserListViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,7 +76,6 @@
 /* Begin PBXFileReference section */
 		AD2D10BD2B182A170056DE33 /* SwiftUI_MVVM_Combine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUI_MVVM_Combine.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD2D10C02B182A170056DE33 /* SwiftUI_MVVM_CombineApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUI_MVVM_CombineApp.swift; sourceTree = "<group>"; };
-		AD2D10C22B182A170056DE33 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		AD2D10C62B182A190056DE33 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AD2D10C92B182A190056DE33 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		AD2D10CF2B182A190056DE33 /* SwiftUI_MVVM_CombineTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftUI_MVVM_CombineTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -91,6 +98,11 @@
 		AD2D11162B1851D10056DE33 /* APIRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRouter.swift; sourceTree = "<group>"; };
 		AD2D11182B1852510056DE33 /* APIParameter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIParameter.swift; sourceTree = "<group>"; };
 		AD2D111A2B18549A0056DE33 /* Encodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Encodable.swift; sourceTree = "<group>"; };
+		AD8316E72B1DAF760011E3DF /* UserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserView.swift; sourceTree = "<group>"; };
+		AD8316EA2B1EC0F60011E3DF /* AddUserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddUserView.swift; sourceTree = "<group>"; };
+		AD8316EE2B1ECADF0011E3DF /* AddUserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddUserViewModel.swift; sourceTree = "<group>"; };
+		AD8318B22B22C1510011E3DF /* EditUserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditUserView.swift; sourceTree = "<group>"; };
+		AD8318B42B22C1600011E3DF /* EditUserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditUserViewModel.swift; sourceTree = "<group>"; };
 		ADE6C2D42B185B530099413C /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		ADE6C2D72B185E940099413C /* RepoServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoServices.swift; sourceTree = "<group>"; };
 		ADE6C2DA2B186A4E0099413C /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
@@ -107,6 +119,10 @@
 		ADE6C3442B1C853F0099413C /* RepoDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoDetailsView.swift; sourceTree = "<group>"; };
 		ADE6C3462B1C854A0099413C /* EventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventView.swift; sourceTree = "<group>"; };
 		ADE6C3482B1C855A0099413C /* RepoDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoDetailsViewModel.swift; sourceTree = "<group>"; };
+		ADE6C34A2B1CB6C20099413C /* UserServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserServices.swift; sourceTree = "<group>"; };
+		ADE6C34C2B1CB72C0099413C /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		ADE6C3522B1CC0DF0099413C /* UserListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListView.swift; sourceTree = "<group>"; };
+		ADE6C3542B1CC0E90099413C /* UserListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -201,12 +217,12 @@
 		AD2D10EC2B182A740056DE33 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				ADE6C34E2B1CC0B70099413C /* User */,
 				ADE6C3432B1C85170099413C /* Repo */,
 				ADE6C3242B19AC1E0099413C /* Tabbar */,
 				ADE6C2D92B186A420099413C /* Login */,
 				AD2D10F72B182C860056DE33 /* Main */,
 				AD2D10F62B182C310056DE33 /* Base */,
-				AD2D10C22B182A170056DE33 /* ContentView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -231,6 +247,7 @@
 		AD2D10EF2B182B150056DE33 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				AD8318B62B22C7AC0011E3DF /* Fonts */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -261,6 +278,7 @@
 			isa = PBXGroup;
 			children = (
 				AD2D11062B18374A0056DE33 /* CoreData.swift */,
+				ADE6C34A2B1CB6C20099413C /* UserServices.swift */,
 			);
 			path = Local;
 			sourceTree = "<group>";
@@ -271,6 +289,7 @@
 				ADE6C2D42B185B530099413C /* Event.swift */,
 				AD2D11112B1843A90056DE33 /* Repo.swift */,
 				AD2D11082B1837FD0056DE33 /* CoreData.xcdatamodeld */,
+				ADE6C34C2B1CB72C0099413C /* User.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -326,6 +345,31 @@
 				AD2D11142B1845730056DE33 /* Log.swift */,
 			);
 			path = Log;
+			sourceTree = "<group>";
+		};
+		AD8316E92B1EBF6C0011E3DF /* AddUser */ = {
+			isa = PBXGroup;
+			children = (
+				AD8316EA2B1EC0F60011E3DF /* AddUserView.swift */,
+				AD8316EE2B1ECADF0011E3DF /* AddUserViewModel.swift */,
+			);
+			path = AddUser;
+			sourceTree = "<group>";
+		};
+		AD8318B12B22C13E0011E3DF /* EditUser */ = {
+			isa = PBXGroup;
+			children = (
+				AD8318B22B22C1510011E3DF /* EditUserView.swift */,
+				AD8318B42B22C1600011E3DF /* EditUserViewModel.swift */,
+			);
+			path = EditUser;
+			sourceTree = "<group>";
+		};
+		AD8318B62B22C7AC0011E3DF /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 		ADE6C2D62B185E6D0099413C /* RepoServices */ = {
@@ -404,6 +448,26 @@
 				ADE6C3272B19AED70099413C /* RepoList */,
 			);
 			path = Repo;
+			sourceTree = "<group>";
+		};
+		ADE6C34E2B1CC0B70099413C /* User */ = {
+			isa = PBXGroup;
+			children = (
+				AD8318B12B22C13E0011E3DF /* EditUser */,
+				AD8316E92B1EBF6C0011E3DF /* AddUser */,
+				ADE6C34F2B1CC0BE0099413C /* UserList */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
+		ADE6C34F2B1CC0BE0099413C /* UserList */ = {
+			isa = PBXGroup;
+			children = (
+				ADE6C3522B1CC0DF0099413C /* UserListView.swift */,
+				ADE6C3542B1CC0E90099413C /* UserListViewModel.swift */,
+				AD8316E72B1DAF760011E3DF /* UserView.swift */,
+			);
+			path = UserList;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -549,30 +613,38 @@
 				AD2D11102B18424C0056DE33 /* Request.swift in Sources */,
 				AD2D11152B1845730056DE33 /* Log.swift in Sources */,
 				AD2D10FB2B182DAF0056DE33 /* MainViewModel.swift in Sources */,
+				AD8316E82B1DAF760011E3DF /* UserView.swift in Sources */,
 				AD2D11192B1852510056DE33 /* APIParameter.swift in Sources */,
 				ADE6C2D52B185B530099413C /* Event.swift in Sources */,
+				ADE6C3552B1CC0E90099413C /* UserListViewModel.swift in Sources */,
+				AD8318B52B22C1600011E3DF /* EditUserViewModel.swift in Sources */,
 				AD2D110A2B1837FD0056DE33 /* CoreData.xcdatamodeld in Sources */,
 				AD2D11172B1851D10056DE33 /* APIRouter.swift in Sources */,
 				ADE6C3292B19AF900099413C /* RepoListView.swift in Sources */,
 				AD2D110C2B183D180056DE33 /* URLs.swift in Sources */,
 				AD2D11052B18346C0056DE33 /* Navigator.swift in Sources */,
 				ADE6C3312B19BB790099413C /* Combine.swift in Sources */,
+				AD8316EF2B1ECADF0011E3DF /* AddUserViewModel.swift in Sources */,
 				ADE6C3472B1C854A0099413C /* EventView.swift in Sources */,
-				AD2D10C32B182A170056DE33 /* ContentView.swift in Sources */,
+				ADE6C34B2B1CB6C20099413C /* UserServices.swift in Sources */,
+				ADE6C3532B1CC0DF0099413C /* UserListView.swift in Sources */,
 				ADE6C32B2B19AF990099413C /* RepoView.swift in Sources */,
 				ADE6C3262B19AC2D0099413C /* TabarView.swift in Sources */,
 				ADE6C3452B1C853F0099413C /* RepoDetailsView.swift in Sources */,
 				ADE6C32D2B19AFAA0099413C /* RepoListViewModel.swift in Sources */,
+				AD8318B32B22C1510011E3DF /* EditUserView.swift in Sources */,
 				AD2D11122B1843A90056DE33 /* Repo.swift in Sources */,
 				AD2D11072B18374A0056DE33 /* CoreData.swift in Sources */,
 				AD2D10F92B182D930056DE33 /* MainView.swift in Sources */,
 				ADE6C2DB2B186A4E0099413C /* LoginView.swift in Sources */,
 				AD2D10C12B182A170056DE33 /* SwiftUI_MVVM_CombineApp.swift in Sources */,
+				AD8316EB2B1EC0F60011E3DF /* AddUserView.swift in Sources */,
 				AD2D10FD2B182DD10056DE33 /* BaseViewModel.swift in Sources */,
 				AD2D11002B182E9C0056DE33 /* Destination.swift in Sources */,
 				ADE6C3492B1C855A0099413C /* RepoDetailsViewModel.swift in Sources */,
 				AD2D110E2B183D8C0056DE33 /* APIClient.swift in Sources */,
 				ADE6C2D82B185E940099413C /* RepoServices.swift in Sources */,
+				ADE6C34D2B1CB72C0099413C /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

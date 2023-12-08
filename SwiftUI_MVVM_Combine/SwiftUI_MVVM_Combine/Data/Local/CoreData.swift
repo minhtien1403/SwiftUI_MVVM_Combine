@@ -55,3 +55,10 @@ struct PersistenceController {
         container.viewContext.automaticallyMergesChangesFromParent = true
     }
 }
+
+enum CoreDataError: Error {
+    
+    case selfDeallocated
+    case userNotFound
+    case saveError(Error)
+}

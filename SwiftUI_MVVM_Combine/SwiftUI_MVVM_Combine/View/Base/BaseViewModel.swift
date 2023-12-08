@@ -7,6 +7,3 @@
 
 import Foundation
 
-enum ViewState {
-    case isLoading, loaded, loadingMore, reloading, errorLoaded
-}

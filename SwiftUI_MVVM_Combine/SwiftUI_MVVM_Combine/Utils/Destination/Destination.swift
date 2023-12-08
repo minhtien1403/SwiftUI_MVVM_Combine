@@ -14,6 +14,9 @@ enum Destination: Hashable, Equatable {
     case login(viewModel: LoginViewModel)
     case repoList(viewModel: RepoListViewModel)
     case repoDetails(viewModel: RepoDetailsViewModel)
+    case userList(viewModel: UserListViewModel)
+    case addUser(onAdd: (User) -> Void)
+    case editUser(user: User, onUpdate: (User) -> Void)
     
     var view: AnyView {
         switch self {
@@ -27,13 +30,19 @@ enum Destination: Hashable, Equatable {
             RepoListView(viewModel: viewModel).toAnyView()
         case.repoDetails(viewModel: let viewModel):
             RepoDetailsView(viewModel: viewModel).toAnyView()
+        case .userList(viewModel: let viewModel):
+            UserListView(viewModel: viewModel).toAnyView()
+        case .addUser(onAdd: let onAdd):
+            AddUserView(onAdd: onAdd).toAnyView()
+        case .editUser(user: let user, onUpdate: let onUpdate):
+            EditUserView(viewModel: EditUserViewModel(user: user, onUpdate: onUpdate)).toAnyView()
         }
     }
 }
 
-extension Destination {
+extension Destination: Identifiable {
     
-    private var id: String { UUID().uuidString }
+    var id: String { UUID().uuidString }
     
     func hash(into hasher: inout Hasher) {
         return hasher.combine(id)

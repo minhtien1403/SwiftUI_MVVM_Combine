@@ -11,10 +11,14 @@ import Factory
 
 final class RepoListViewModel: ObservableObject {
     
+    enum RepoListViewState {
+        case isLoading, loaded, loadingMore, reloading, errorLoaded
+    }
+    
     @Injected(\.repoServices) var repoServices: RepoServicesProtocol
     @Published var repos: [Repo] = []
     @Published var page = 1
-    @Published var state: ViewState = .isLoading
+    @Published var state: RepoListViewState = .isLoading
     @Published var error: NetworkRequestError?
     private let perPage = 20
     private var cancellableSet: Set<AnyCancellable> = []

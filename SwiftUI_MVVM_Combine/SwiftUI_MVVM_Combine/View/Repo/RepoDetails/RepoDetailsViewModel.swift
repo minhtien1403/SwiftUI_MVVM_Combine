@@ -11,10 +11,14 @@ import Combine
 
 final class RepoDetailsViewModel: ObservableObject {
     
+    enum RepoDetailsViewState {
+        case isLoading, loaded, loadingMore, reloading, errorLoaded
+    }
+    
     @Injected(\.repoServices) var repoServices: RepoServicesProtocol
     @Published var events: [Event] = []
     @Published var page = 1
-    @Published var state: ViewState = .isLoading
+    @Published var state: RepoDetailsViewState = .isLoading
     @Published var error: NetworkRequestError?
     let repo: Repo
     private let perPage = 20

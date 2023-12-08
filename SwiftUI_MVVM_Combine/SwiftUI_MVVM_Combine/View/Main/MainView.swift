@@ -31,7 +31,15 @@ struct MainView: View {
                     }
                 }
                 Section("User - CoreData") {
-                    Text("User List")
+                    HStack(content: {
+                        Text("User List")
+                        Spacer()
+                        Image(systemName: "chevron.right")
+                    })
+                    .contentShape(Rectangle())
+                    .onTapGesture {
+                        navigator.push(to: .userList(viewModel: UserListViewModel()))
+                    }
                 }
                 .onTapGesture {
                     // navigate to user list

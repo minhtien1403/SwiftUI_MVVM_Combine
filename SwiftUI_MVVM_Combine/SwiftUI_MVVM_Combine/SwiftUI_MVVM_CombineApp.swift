@@ -21,6 +21,11 @@ struct SwiftUI_MVVM_CombineApp: App {
                         destination.view
                     }
             }
+            .sheet(item: $navigator.presentingSheet, content: { destination in
+                NavigationView(content: {
+                    destination.view
+                })
+            })
             .environment(\.managedObjectContext, persistenceController.container.viewContext)
             .environmentObject(navigator)
         }
