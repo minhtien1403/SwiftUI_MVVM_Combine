@@ -15,7 +15,6 @@ class Navigator: ObservableObject {
     @Published var presentingFullScreen: Destination? = nil
     @Published var isPresentingAlert: Bool = false
     @Published var isPresentingFullScreen: Bool = false
-    @Environment(\.dismiss) var dismiss
     
     private var rootView: Destination {
         return .tabbar

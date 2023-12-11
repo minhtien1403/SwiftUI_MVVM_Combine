@@ -25,7 +25,7 @@ final class RepoListViewModel: ObservableObject {
 
     
     func loadData() {
-        repoServices.getRepos(queryParams: APIParameters.GetRepoParam(per_page: perPage, page: page))
+        repoServices.getRepos(queryParams: APIParameters.GetRepoParam(perPage: perPage, page: page))
             .sink { complete in
                 switch complete {
                 case.finished:
@@ -48,7 +48,7 @@ final class RepoListViewModel: ObservableObject {
             return
         }
         state = .loadingMore
-        repoServices.getRepos(queryParams: APIParameters.GetRepoParam(per_page: perPage, page: page + 1))
+        repoServices.getRepos(queryParams: APIParameters.GetRepoParam(perPage: perPage, page: page + 1))
             .sink { complete in
                 switch complete {
                 case .finished:

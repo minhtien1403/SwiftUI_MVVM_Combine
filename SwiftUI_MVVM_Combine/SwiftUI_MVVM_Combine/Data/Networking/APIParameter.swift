@@ -12,13 +12,23 @@ struct APIParameters {
     struct GetRepoParam: Encodable {
         
         var q: String = "language:swift"
-        var per_page: Int
+        var perPage: Int
         var page: Int
+        
+        private enum CodingKeys: String, CodingKey {
+            case perPage = "per_page"
+            case q, page
+        }
     }
     
     struct GetEventParam: Encodable {
         
         var page: Int
-        var per_page: Int
+        var perPage: Int
+        
+        private enum CodingKeys: String, CodingKey {
+            case perPage = "per_page"
+            case page
+        }
     }
 }
