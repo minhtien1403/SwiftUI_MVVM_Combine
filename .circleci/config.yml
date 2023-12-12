@@ -2,6 +2,42 @@
 # See: https://circleci.com/docs/configuration-reference
 version: 2.1
 
+orbs:
+  macos: circleci/macos@1.0
+commands:
+  restore_gem:
+    steps:
+      - restore_cache:
+          keys:
+            - v1-dependencies-{{ checksum "Gemfile.lock" }}
+            - v1-dependencies-
+  restore_package:
+    steps:
+      - restore_cache:
+          keys:
+            - v1-dependencies-{{ checksum "package-lock.json" }}
+            - v1-dependencies-
+  save_gem:
+    steps:
+      - save_cache:
+          key: v1-dependencies-{{ checksum "Gemfile.lock" }}
+          paths:
+            - vendor/bundle
+  save_package:
+    steps:
+      - save_cache:
+          key: v1-dependencies-{{ checksum "package-lock.json" }}
+          paths:
+            - node_modules
+  install_tools:
+    steps:
+      - run:
+          name: install tools
+          command: |
+            bundle install --path vendor/bundle
+            bundle update fastlane
+            npm install firebase-tools
+
 # Define a job to be invoked later in a workflow.
 # See: https://circleci.com/docs/configuration-reference/#jobs
 jobs:
@@ -14,10 +50,14 @@ jobs:
     # See: https://circleci.com/docs/configuration-reference/#steps
     steps:
       - checkout
+      - restore_gem
+      - install_tools
       - run:
-          name: "Say hello"
-          command: "echo Hello, World!"
-
+          name: "Test"
+          command: |
+            bundle exec fastlane test_lane
+          no_output_timeout: 15m
+  
 # Orchestrate jobs using workflows
 # See: https://circleci.com/docs/configuration-reference/#workflows
 workflows:
