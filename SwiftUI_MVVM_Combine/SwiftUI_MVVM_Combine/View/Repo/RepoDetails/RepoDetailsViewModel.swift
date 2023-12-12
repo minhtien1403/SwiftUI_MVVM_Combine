@@ -29,7 +29,7 @@ final class RepoDetailsViewModel: ObservableObject {
     }
         
     func loadEvent() {
-        repoServices.getEvents(urlString: repo.eventUrl, queryParams: APIParameters.GetEventParam(page: page, per_page: perPage))
+        repoServices.getEvents(urlString: repo.eventUrl, queryParams: APIParameters.GetEventParam(page: page, perPage: perPage))
             .sink { complete in
                 switch complete {
                 case .finished:
@@ -49,7 +49,7 @@ final class RepoDetailsViewModel: ObservableObject {
     func loadMoreEvent() {
         guard state == .loaded else { return }
         state = .loadingMore
-        repoServices.getEvents(urlString: repo.eventUrl, queryParams: APIParameters.GetEventParam(page: page + 1, per_page: perPage))
+        repoServices.getEvents(urlString: repo.eventUrl, queryParams: APIParameters.GetEventParam(page: page + 1, perPage: perPage))
             .sink { complete in
                 switch complete {
                 case .finished:

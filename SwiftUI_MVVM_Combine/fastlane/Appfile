@@ -1,0 +1,6 @@
+app_identifier("com.tientm.SwiftUI-MVVM-Combine") # The bundle identifier of your app
+apple_id("minhtiencp1403@gmail.com") # Your Apple Developer Portal username
+
+
+# For more information about the Appfile, see:
+#     https://docs.fastlane.tools/advanced/#appfile

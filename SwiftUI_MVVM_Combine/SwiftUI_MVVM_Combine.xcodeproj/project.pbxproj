@@ -103,6 +103,7 @@
 		AD8316EE2B1ECADF0011E3DF /* AddUserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddUserViewModel.swift; sourceTree = "<group>"; };
 		AD8318B22B22C1510011E3DF /* EditUserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditUserView.swift; sourceTree = "<group>"; };
 		AD8318B42B22C1600011E3DF /* EditUserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditUserViewModel.swift; sourceTree = "<group>"; };
+		AD8632CD2B2837A100E01EEE /* SwiftUI_MVVM_CombineDebug.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SwiftUI_MVVM_CombineDebug.entitlements; sourceTree = "<group>"; };
 		ADE6C2D42B185B530099413C /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		ADE6C2D72B185E940099413C /* RepoServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoServices.swift; sourceTree = "<group>"; };
 		ADE6C2DA2B186A4E0099413C /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
@@ -174,6 +175,7 @@
 		AD2D10BF2B182A170056DE33 /* SwiftUI_MVVM_Combine */ = {
 			isa = PBXGroup;
 			children = (
+				AD8632CD2B2837A100E01EEE /* SwiftUI_MVVM_CombineDebug.entitlements */,
 				AD2D10F52B182BE10056DE33 /* Constant */,
 				AD2D10F02B182B300056DE33 /* Utils */,
 				AD2D10EF2B182B150056DE33 /* Resource */,
@@ -807,10 +809,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_ENTITLEMENTS = SwiftUI_MVVM_Combine/SwiftUI_MVVM_CombineDebug.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"SwiftUI_MVVM_Combine/Preview Content\"";
-				DEVELOPMENT_TEAM = 8HJZFUVFSV;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = 8HJZFUVFSV;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -826,6 +832,8 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.tientm.SwiftUI-MVVM-Combine";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "match Development com.tientm.SwiftUI-MVVM-Combine";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -871,7 +879,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 8HJZFUVFSV;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.tientm.SwiftUI-MVVM-CombineTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -891,7 +899,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 8HJZFUVFSV;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.tientm.SwiftUI-MVVM-CombineTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -910,6 +918,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 8HJZFUVFSV;
 				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.tientm.SwiftUI-MVVM-CombineUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -928,6 +937,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 8HJZFUVFSV;
 				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.tientm.SwiftUI-MVVM-CombineUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
