@@ -23,6 +23,6 @@ struct TabarView: View {
     }
 }
 
-#Preview {
-    TabarView()
-}
+//#Preview {
+//    TabarView()
+//}

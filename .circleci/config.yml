@@ -44,19 +44,22 @@ jobs:
   say-hello:
     # Specify the execution environment. You can specify an image from Docker Hub or use one of our convenience images from CircleCI's Developer Hub.
     # See: https://circleci.com/docs/configuration-reference/#executor-job
-    docker:
-      - image: cimg/base:stable
+    macos:
+      xcode: 15.0.1
     # Add steps to the job
     # See: https://circleci.com/docs/configuration-reference/#steps
     steps:
       - checkout
-      - restore_gem
-      - install_tools
       - run:
           name: "Test"
           command: |
+            cd SwiftUI_MVVM_Combine;
+            bundle update;
+            bundle install;
             bundle exec fastlane test_lane
           no_output_timeout: 15m
+      - store_artifacts:
+          path: /Users/distiller/project/SwiftUI_MVVM_Combine/SwiftUI_MVVM_Combine.ipa
   
 # Orchestrate jobs using workflows
 # See: https://circleci.com/docs/configuration-reference/#workflows
