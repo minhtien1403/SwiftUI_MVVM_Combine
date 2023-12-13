@@ -85,6 +85,6 @@ struct RepoDetailsView: View {
     }
 }
 
-#Preview {
-    RepoDetailsView(viewModel: RepoDetailsViewModel(repo: Repo()))
-}
+//#Preview {
+//    RepoDetailsView(viewModel: RepoDetailsViewModel(repo: Repo()))
+//}

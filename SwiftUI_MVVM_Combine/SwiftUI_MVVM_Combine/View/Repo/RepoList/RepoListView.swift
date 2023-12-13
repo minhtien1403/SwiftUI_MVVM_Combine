@@ -77,6 +77,6 @@ struct RepoListView: View {
     }
 }
 
-#Preview {
-    RepoListView(viewModel: RepoListViewModel())
-}
+//#Preview {
+//    RepoListView(viewModel: RepoListViewModel())
+//}

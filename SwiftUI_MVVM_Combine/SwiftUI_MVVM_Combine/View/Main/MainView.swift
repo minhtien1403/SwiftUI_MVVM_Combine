@@ -52,6 +52,6 @@ struct MainView: View {
     }
 }
 
-#Preview {
-    MainView(viewModel: MainViewModel())
-}
+//#Preview {
+//    MainView(viewModel: MainViewModel())
+//}
